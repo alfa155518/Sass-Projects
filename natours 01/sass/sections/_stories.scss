@@ -1,0 +1,106 @@
+.stories-section {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    @include center-section(12rem, 1rem, 9rem, 4rem);
+
+    .bg-video {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            background-color: rgba($color-white, $alpha: .8);
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+    }
+
+    .stories-container {
+        transform: skew(-11deg, -5deg);
+
+        .store {
+            background-color: $color-white;
+            width: fit-content;
+            margin: 5px auto;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 5rem;
+            margin-bottom: 10rem;
+            padding: 2rem;
+            transform: skewY(3deg);
+            -webkit-transform: skewY(3deg);
+            -moz-transform: skewY(3deg);
+            -ms-transform: skewY(3deg);
+            -o-transform: skewY(3deg);
+
+            .story-img {
+                position: relative;
+
+                img {
+                    width: 107px;
+                    height: 107px;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .caption {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    font-size: 2rem;
+                    transform: translate(-50%, -50%);
+                    color: $color-white;
+                    z-index: -1;
+                }
+                &:hover img {
+                    @include transition(.5s);
+                    filter: blur(2px) brightness(80%);
+                    -webkit-filter: blur(2px) brightness(80%);
+                }
+                &:hover .caption {
+                    @include transition(.8s);
+                    z-index: 1;
+                }
+            }
+
+            .story-content {
+                padding: 1.5rem;
+
+                .story-name {
+                    font-size: 2rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    max-width: 40rem;
+                    line-height: 1.8;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+}

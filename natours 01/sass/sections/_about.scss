@@ -1,0 +1,95 @@
+
+
+%paragraph {
+    color: $color-grey-dark;
+    font-size: $default-size;
+    line-height: 1.8;
+}
+%head-info {
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+.about {
+    @include center-section(6rem,1rem,8rem,1rem);
+    padding: 3rem 1rem;
+    background-color: $color-grey-light-1;
+    
+    .content {
+        display: flex;
+        flex-wrap: wrap;
+        color: $color-grey-dark-3;
+    .right-side {
+        padding: .5rem 2.5rem;
+        margin: 0 1rem;
+        flex: 1;
+        .info-1 {
+            padding:2rem 0;
+            h3 {
+                @extend %head-info;
+            }
+            p {
+                @extend %paragraph;
+            }
+        }
+        .info-2 {
+            h4 {
+                @extend %head-info;
+            }
+            p {
+                @extend %paragraph;
+            }
+        }
+        .more {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 3rem 1rem;
+            color: $color-primary;
+            font-size: 1.5rem;
+            letter-spacing: .2rem;
+            &:hover {
+                i {
+                    animation: leftToRight 1s infinite linear;
+                }
+            }
+        }
+    }
+    .left-side {
+        position: relative;
+        flex: 1;
+        img {
+            position: absolute;
+            transition: all .5s;
+            width: 55%;
+            &:hover {
+                scale: 1.1;
+                z-index: 2;
+            }
+            &:first-child {
+                // z-index: 1;
+                left: 0;
+                top: -2rem;
+                box-shadow: 1px 0 1.5rem 0;
+            }
+            &:nth-child(2) {
+                // top: 13rem;
+                // left: 7rem;
+                // z-index: 2;
+                right: 0;
+                top: 2rem;
+                box-shadow: .1rem 0 2rem 0;
+            }
+            &:last-child {
+                // left: 18rem;
+                // z-index: 3;
+                left: 20%;
+                top: 10rem;
+                box-shadow: .1rem 0 2.5rem 0;
+            }
+            &:hover &:not(:hover) {
+                transform: scale(.95);
+            }
+        }
+    }
+}
+}

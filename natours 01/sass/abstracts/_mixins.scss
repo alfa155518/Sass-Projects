@@ -1,0 +1,25 @@
+
+
+// Center Section
+@mixin center-section($mt,$mb,$pt,$pb) {
+    margin-top: $mt;
+    margin-bottom: $mb;
+    padding-top: $pt;
+    padding-bottom: $pb;
+}
+
+@mixin radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin transition($time) {
+    transition: all $time;
+    -webkit-transition: all $time;
+    -moz-transition: all $time;
+    -ms-transition: all $time;
+    -o-transition: all $time;
+}
