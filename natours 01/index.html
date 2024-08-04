@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/icon-font.css">
-    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="sass/all.min.css">
     <link rel="stylesheet" href="sass/main.css">
     <link rel="shortcut icon" type="image/png" href="img/favicon.png">
@@ -207,10 +207,50 @@
         <!-- =======BOOKING Section======== -->
         <section class="container-booking">
             <div class="booking-box">
-                
+                <h3 class="section-name">
+                    start booking now !
+                </h3>
+                <div class="book-form">
+                    <div class="form-group">
+                        <input type="text" id="name" class="form-control" required placeholder="Full Name">
+                        <label for="name">Full Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" class="form-control" required placeholder="Email Address">
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="form-group-radio">
+                        <input type="radio" id="radio-1"> 
+                        <label for="radio-1">Small tour group</label>
+                        <input type="radio" id="radio-2"> 
+                        <label for="radio-2">large tour group</label>
+                    </div>
+                    <button >
+                        next step <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
             </div>
         </section>
 
+        <!-- =======FOOTER======== -->
+        <footer>
+            <div class="logo">
+                <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="footer-logo">
+            </div>
+            <div class="content">
+                <ul class="links">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">company</a></li>
+                    <li><a href="#">careers</a></li>
+                    <li><a href="#">privacy policy</a></li>
+                    <li><a href="#">terms</a></li>
+                </ul>
+                <article>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero ratione fugit labore similique sapiente praesentium rem, veritatis cumque nulla dolorem nam autem adipisci inventore a asperiores quisquam, numquam minima! Similique.
+                </article>
+            </div>
+            <p class="copy-right">© Made With By <strong>Ahmed Hassob 💚</strong></p>
+        </footer>
     </main>
 
 </body>

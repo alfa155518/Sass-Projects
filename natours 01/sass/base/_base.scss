@@ -1,37 +1,39 @@
 *,
 *::after,
 *::before {
-    padding: 0;
-    margin: 0;
-    box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
 }
 
 html {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 .container {
-    width: 100%;
-    // margin: 0 4rem;
-    // padding: 0 4rem;
+  width: 100%;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 .section-name {
-    text-align: center;
-    padding: 2.5rem 0;
-    margin: 1rem auto;
-    font-size: 3rem;
-    text-transform: uppercase;
-    letter-spacing: .2rem;
-    background: linear-gradient(to right,$color-primary-dark, $color-primary-light);
-    background-clip: text;
-    color: transparent;
+  text-align: center;
+  padding: 2.5rem 0;
+  margin: 1rem auto;
+  font-size: 3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  background: linear-gradient(
+    to right,
+    $color-primary-dark,
+    $color-primary-light
+  );
+  background-clip: text;
+  color: transparent;
 }
